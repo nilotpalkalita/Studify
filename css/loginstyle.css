@@ -69,7 +69,8 @@ input[type="submit"] {
 }
 
 #login-form {
-  width: 300px;
+  width: 400px;
+  position: center
 }
 
 #login-form h3 {
@@ -99,7 +100,7 @@ input[type="submit"] {
   height: 8px;
   left: 50%;
   margin: -4px 0 0 -4px;
-  position: absolute;
+  position: center;
   top: 0;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);

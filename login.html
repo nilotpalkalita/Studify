@@ -30,13 +30,7 @@
   <header id="header">
 		  <h1><a href="index.html">Studify</a></h1>
 				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="lectures.html">Lectures</a></li>
-						<li><a href="performance.html">Performance</a></li>
-                         <li><a href="forum.html">Forums</a></li>
-						
-				  </ul>
+					
 				</nav>
 			</header>
 
@@ -48,21 +42,21 @@
 
     <fieldset>
 
-      <form action="javascript:void(0);" method="get">
+      <center><form action="check.php" method="post">
 
-        <input type="email" required value="Email" onBlur="if(this.value=='')this.value='Email'" onFocus="if(this.value=='Email')this.value='' ">
+        <input type="email" required value="Email" onBlur="if(this.value=='')this.value='Email'" onFocus="if(this.value=='Email')this.value='' " id="userid" name="userid">
 
-        <input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' "> 
+        <input type="password" required value="Password" onBlur="if(this.value=='')this.value='Password'" onFocus="if(this.value=='Password')this.value='' " id="password" name="password"> 
 
         <input type="submit" value="Login">
 
         <footer class="clearfix">
 
-          <p><span class="info">?</span><a href="#">Forgot Password</a></p>
+          <p><span class="info">?</span><a href="forgot.html">Forgot Password</a></p>
 
         </footer>
 
-      </form>
+      </form></center>
 
     </fieldset>
 

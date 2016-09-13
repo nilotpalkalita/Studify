@@ -1,3 +1,7 @@
+<?php
+
+include('config.php');
+?>
 <!DOCTYPE html>
 
 <html >
@@ -29,13 +33,28 @@
 					<ul>
 						
 						<li><a href="lectures.html">Lectures</a></li>
-						<li><a href="performance.php">Student Info</a></li>
+						<li><a href="performance.html">Performance</a></li>
                          <li><a href="forum.php">Forums</a></li>
 						
 					</ul>
 				</nav>
 			</header>
-
+<?php
+if(isset($_SESSION['username']))
+{
+$nb_new_pm = mysql_fetch_array(mysql_query('select count(*) as nb_new_pm from pm where ((user1="'.$_SESSION['userid'].'" and user1read="no") or (user2="'.$_SESSION['userid'].'" and user2read="no")) and id2="1"'));
+$nb_new_pm = $nb_new_pm['nb_new_pm'];
+?>
+<div class="box">
+	<div class="box_left">
+    	<a href="<?php echo $url_home; ?>">Forum Index</a>
+    </div>
+	<div class="box_right">
+    	<a href="list_pm.php">Your messages(<?php echo $nb_new_pm; ?>)</a> - <a href="profile.php?id=<?php echo $_SESSION['userid']; ?>"><?php echo htmlentities($_SESSION['username'], ENT_QUOTES, 'UTF-8'); ?></a> (<a href="login.php">Logout</a>)
+    </div>
+	<div class="clean"></div>
+</div>
+?<
 
 		
 			<section id="banner">
